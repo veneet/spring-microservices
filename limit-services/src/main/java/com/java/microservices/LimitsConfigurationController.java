@@ -21,6 +21,9 @@ public class LimitsConfigurationController {
 
 	@GetMapping("/limits")
 	public LimitConfiguration retrieveLimitsFromConfigurations() {
+
+		// Hard Code Values
+		// LimitConfiguration limitConfiguration = new LimitConfiguration(1, 1000);
 		LimitConfiguration limitConfiguration = new LimitConfiguration(configuration.getMinimum(),
 				configuration.getMaximum());
 		return limitConfiguration;
